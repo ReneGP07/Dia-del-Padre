@@ -13,18 +13,22 @@
 * { box-sizing: border-box; }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--cream);
-  font-family: 'Merriweather', serif;
-  background:
-    linear-gradient(rgba(25, 12, 5, .72), rgba(25, 12, 5, .88)),
-    radial-gradient(circle at center, rgba(240, 194, 118, .12), transparent 45%),
-    url('../img/portada.jpg');
-  background-color: #2a160c;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(55, 30, 12, 0.55),
+            rgba(20, 10, 5, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Georgia, serif;
 }
 
 body::before {
