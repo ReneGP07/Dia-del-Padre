@@ -2,132 +2,205 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#3a1d0f" />
+  <meta name="description" content="Regalo digital de Día del Padre para René Guzmán." />
   <title>Feliz Día del Padre | René Guzmán</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <main class="app">
-    <section id="home" class="view active">
-      <div class="hero-card">
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <main class="app" id="app">
+    <section id="home" class="view active" aria-labelledby="main-title">
+      <header class="hero-card">
         <p class="eyebrow">Un regalo hecho con amor</p>
-        <h1>Feliz Día del Padre</h1>
-        <h2>Para René Guzmán</h2>
-        <p class="intro">Una página para guardar cartas, recuerdos y un momento especial dedicado a la familia.</p>
-      </div>
+        <h1 id="main-title">Feliz Día del Padre</h1>
+        <p class="hero-name">Para René Guzmán</p>
+        <p class="intro">
+          Una página creada para guardar cartas, recuerdos y un momento especial de familia.
+        </p>
+      </header>
 
       <nav class="menu-grid" aria-label="Menú principal">
-        <button class="cowboy-btn" data-open="carta-esposa">Carta de tu esposa</button>
-        <button class="cowboy-btn" data-open="carta-rene">Carta René</button>
-        <button class="cowboy-btn" data-open="carta-jesus">Carta Jesús</button>
-        <button class="cowboy-btn" data-open="carta-diego">Carta Diego</button>
-        <button class="cowboy-btn" data-open="recuerdos">Recuerdos</button>
-        <button class="cowboy-btn special" data-open="carta-padre">Carta a mi padre</button>
+        <button class="cowboy-btn" type="button" data-open="carta-esposa">
+          <span>Carta de tu esposa</span>
+        </button>
+
+        <button class="cowboy-btn" type="button" data-open="carta-rene">
+          <span>Carta René</span>
+        </button>
+
+        <button class="cowboy-btn" type="button" data-open="carta-jesus">
+          <span>Carta Jesús</span>
+        </button>
+
+        <button class="cowboy-btn" type="button" data-open="carta-diego">
+          <span>Carta Diego</span>
+        </button>
+
+        <button class="cowboy-btn" type="button" data-open="recuerdos">
+          <span>Recuerdos</span>
+        </button>
+
+        <button class="cowboy-btn special" type="button" data-open="carta-padre">
+          <span>Carta a mi padre</span>
+        </button>
       </nav>
 
-      <button class="game-entry" data-open="juego">Juego: tiro al blanco</button>
+      <button class="game-entry" type="button" data-open="juego">
+        <span>Juego: tiro al blanco</span>
+      </button>
     </section>
 
-    <section id="carta-esposa" class="view">
+    <section id="carta-esposa" class="view" aria-labelledby="titulo-esposa">
       <article class="paper">
-        <h2>Carta de tu esposa</h2>
+        <p class="paper-label">Carta especial</p>
+        <h2 id="titulo-esposa">Carta de tu esposa</h2>
         <p>Mi querido René:</p>
-        <p>Aquí irá la carta de tu esposa. Este espacio está reservado para palabras llenas de amor, agradecimiento y recuerdos compartidos.</p>
-        <p>Gracias por ser parte esencial de nuestra familia, por tu esfuerzo, tu compañía y tu forma de cuidar a quienes amas.</p>
+        <p>
+          Aquí irá la carta de tu esposa. Este espacio está reservado para palabras llenas de amor,
+          agradecimiento y recuerdos compartidos.
+        </p>
+        <p>
+          Gracias por ser parte esencial de nuestra familia, por tu esfuerzo, tu compañía y tu forma
+          de cuidar a quienes amas.
+        </p>
         <p class="signature">Con amor,<br />Tu esposa</p>
       </article>
-      <button class="back-btn" data-back>Volver</button>
+      <button class="back-btn" type="button" data-back>Volver al inicio</button>
     </section>
 
-    <section id="carta-rene" class="view">
+    <section id="carta-rene" class="view" aria-labelledby="titulo-rene">
       <article class="paper">
-        <h2>Carta René</h2>
+        <p class="paper-label">Primer hijo</p>
+        <h2 id="titulo-rene">Carta René</h2>
         <p>Papá:</p>
-        <p>Aquí irá mi carta para ti. Quiero que este espacio conserve lo mucho que te admiro, lo agradecido que estoy contigo y lo importante que eres para mí.</p>
-        <p>Gracias por tu ejemplo, por tu trabajo y por todo lo que has hecho por nosotros.</p>
+        <p>
+          Aquí irá mi carta para ti. Quiero que este espacio conserve lo mucho que te admiro,
+          lo agradecido que estoy contigo y lo importante que eres para mí.
+        </p>
+        <p>
+          Gracias por tu ejemplo, por tu trabajo y por todo lo que has hecho por nosotros.
+        </p>
         <p class="signature">Con cariño,<br />René</p>
       </article>
-      <button class="back-btn" data-back>Volver</button>
+      <button class="back-btn" type="button" data-back>Volver al inicio</button>
     </section>
 
-    <section id="carta-jesus" class="view">
+    <section id="carta-jesus" class="view" aria-labelledby="titulo-jesus">
       <article class="paper">
-        <h2>Carta Jesús</h2>
+        <p class="paper-label">Segundo hijo</p>
+        <h2 id="titulo-jesus">Carta Jesús</h2>
         <p>Papá:</p>
-        <p>Aquí irá la carta de Jesús. Un mensaje para agradecerte por los momentos vividos, tus consejos y el amor que has dado como padre.</p>
-        <p>Este espacio puede llenarse con recuerdos, frases y palabras personales.</p>
+        <p>
+          Aquí irá la carta de Jesús. Un mensaje para agradecerte por los momentos vividos,
+          tus consejos y el amor que has dado como padre.
+        </p>
+        <p>
+          Este espacio puede llenarse con recuerdos, frases y palabras personales.
+        </p>
         <p class="signature">Con cariño,<br />Jesús</p>
       </article>
-      <button class="back-btn" data-back>Volver</button>
+      <button class="back-btn" type="button" data-back>Volver al inicio</button>
     </section>
 
-    <section id="carta-diego" class="view">
+    <section id="carta-diego" class="view" aria-labelledby="titulo-diego">
       <article class="paper">
-        <h2>Carta Diego</h2>
+        <p class="paper-label">Tercer hijo</p>
+        <h2 id="titulo-diego">Carta Diego</h2>
         <p>Papá:</p>
-        <p>Aquí irá la carta de Diego. Un lugar para expresar cariño, gratitud y recuerdos especiales contigo.</p>
-        <p>Gracias por estar presente y por ser una persona tan importante para la familia.</p>
+        <p>
+          Aquí irá la carta de Diego. Un lugar para expresar cariño, gratitud y recuerdos especiales contigo.
+        </p>
+        <p>
+          Gracias por estar presente y por ser una persona tan importante para la familia.
+        </p>
         <p class="signature">Con cariño,<br />Diego</p>
       </article>
-      <button class="back-btn" data-back>Volver</button>
+      <button class="back-btn" type="button" data-back>Volver al inicio</button>
     </section>
 
-    <section id="carta-padre" class="view">
+    <section id="carta-padre" class="view" aria-labelledby="titulo-padre">
       <article class="paper memorial">
-        <h2>Carta a mi padre</h2>
+        <p class="paper-label">Para honrar su memoria</p>
+        <h2 id="titulo-padre">Carta a mi padre</h2>
         <p>Querido papá:</p>
-        <p>Este espacio está pensado como una carta de René Guzmán para su padre, tu abuelo, quien ya falleció.</p>
-        <p>Aquí podrá escribirle aquello que quizá quedó pendiente, darle gracias por sus enseñanzas, recordarlo con cariño y decirle que su presencia sigue viva en la familia.</p>
-        <p>La idea es que esta carta sea íntima, respetuosa y especial; un momento para honrar su memoria en este Día del Padre.</p>
+        <p>
+          Este espacio está pensado como una carta de René Guzmán para su padre, tu abuelo,
+          quien ya falleció.
+        </p>
+        <p>
+          Aquí podrá escribirle aquello que quizá quedó pendiente, darle gracias por sus enseñanzas,
+          recordarlo con cariño y decirle que su presencia sigue viva en la familia.
+        </p>
+        <p>
+          La idea es que esta carta sea íntima, respetuosa y especial; un momento para honrar su memoria
+          en este Día del Padre.
+        </p>
         <p class="signature">Con amor y recuerdo,<br />Tu hijo René</p>
       </article>
-      <button class="back-btn" data-back>Volver</button>
+      <button class="back-btn" type="button" data-back>Volver al inicio</button>
     </section>
 
-    <section id="recuerdos" class="view">
+    <section id="recuerdos" class="view" aria-labelledby="titulo-recuerdos">
       <div class="album">
-        <h2>Recuerdos</h2>
-        <p>Agrega aquí fotografías familiares. Puedes reemplazar los espacios por imágenes dentro de <strong>assets/img/recuerdos/</strong>.</p>
-        <div class="gallery">
-          <div class="photo-slot">Foto 1</div>
-          <div class="photo-slot">Foto 2</div>
-          <div class="photo-slot">Foto 3</div>
-          <div class="photo-slot">Foto 4</div>
-          <div class="photo-slot">Foto 5</div>
-          <div class="photo-slot">Foto 6</div>
+        <p class="section-label">Álbum familiar</p>
+        <h2 id="titulo-recuerdos">Recuerdos</h2>
+        <p>
+          Sustituye estos espacios por fotos familiares dentro de <strong>assets/img/recuerdos/</strong>.
+          La página está preparada para verse bien en celular.
+        </p>
+
+        <div class="gallery" aria-label="Galería de recuerdos">
+          <figure class="photo-card"><div class="photo-placeholder">Foto 1</div><figcaption>Un momento especial</figcaption></figure>
+          <figure class="photo-card"><div class="photo-placeholder">Foto 2</div><figcaption>Familia</figcaption></figure>
+          <figure class="photo-card"><div class="photo-placeholder">Foto 3</div><figcaption>Recuerdo favorito</figcaption></figure>
+          <figure class="photo-card"><div class="photo-placeholder">Foto 4</div><figcaption>Juntos</figcaption></figure>
+          <figure class="photo-card"><div class="photo-placeholder">Foto 5</div><figcaption>Celebración</figcaption></figure>
+          <figure class="photo-card"><div class="photo-placeholder">Foto 6</div><figcaption>Gracias, papá</figcaption></figure>
         </div>
       </div>
-      <button class="back-btn" data-back>Volver</button>
+      <button class="back-btn" type="button" data-back>Volver al inicio</button>
     </section>
 
-    <section id="juego" class="view">
+    <section id="juego" class="view" aria-labelledby="titulo-juego">
       <div class="game-card">
-        <h2>Juego: tiro al blanco</h2>
-        <p>Elige dificultad, presiona iniciar y acierta al blanco antes de que termine el tiempo.</p>
+        <p class="section-label">Minijuego</p>
+        <h2 id="titulo-juego">Juego: tiro al blanco</h2>
+        <p>
+          Elige dificultad, presiona iniciar y acierta al blanco antes de que termine el tiempo.
+          En celular, toca directamente el blanco.
+        </p>
 
         <div class="game-controls">
+          <label for="difficulty">Dificultad</label>
           <select id="difficulty">
             <option value="facil">Fácil</option>
             <option value="media">Media</option>
             <option value="dificil">Difícil</option>
             <option value="pro">Pro</option>
           </select>
-          <button id="startGame">Iniciar</button>
+          <button id="startGame" type="button">Iniciar juego</button>
         </div>
 
-        <div class="score-board">
+        <div class="score-board" aria-live="polite">
           <span>Puntos: <strong id="score">0</strong></span>
-          <span>Tiempo: <strong id="timer">30</strong>s</span>
+          <span>Tiempo: <strong id="timer">35</strong>s</span>
           <span>Nivel: <strong id="levelLabel">Fácil</strong></span>
+          <span>Récord: <strong id="bestScore">0</strong></span>
         </div>
 
-        <div id="range" class="range">
-          <button id="target" class="target" aria-label="Blanco">★</button>
+        <div id="range" class="range" role="application" aria-label="Campo de tiro">
+          <button id="target" class="target" type="button" aria-label="Blanco"></button>
         </div>
 
         <p id="gameMessage" class="game-message">Listo para jugar.</p>
       </div>
-      <button class="back-btn" data-back>Volver</button>
+      <button class="back-btn" type="button" data-back>Volver al inicio</button>
     </section>
   </main>
 

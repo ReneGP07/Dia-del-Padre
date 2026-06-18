@@ -1,35 +1,65 @@
 # Página Día del Padre - René Guzmán
 
-Proyecto listo para GitHub Pages.
+Proyecto estático listo para GitHub Pages.
 
 ## Estructura
 
 ```text
 index.html
-assets/css/styles.css
-assets/js/app.js
-assets/img/portada.jpg
-assets/img/recuerdos/
-assets/audio/
+assets/
+  css/styles.css
+  js/app.js
+  img/fondo-montanas.jpg
+  img/portada.jpg
+  img/recuerdos/
+  audio/
 ```
 
-## Orden del menú
-
-1. Carta de tu esposa
-2. Carta René
-3. Carta Jesús
-4. Carta Diego
-5. Recuerdos
-6. Carta a mi padre
-7. Juego: tiro al blanco
-
-La sección **Carta a mi padre** está pensada como una carta de René Guzmán para su padre fallecido, es decir, para honrar la memoria del abuelo.
-
-## Para subir a GitHub Pages
+## Cómo subirlo a GitHub Pages
 
 1. Crea un repositorio en GitHub.
-2. Sube todos los archivos respetando la estructura.
-3. Entra a Settings > Pages.
-4. Selecciona Deploy from branch.
-5. Elige main y carpeta /root.
-6. Guarda.
+2. Sube `index.html`, la carpeta `assets` y este `README.md`.
+3. Entra a `Settings > Pages`.
+4. En `Source`, elige `Deploy from a branch`.
+5. Selecciona `main` y `/root`.
+6. Guarda los cambios.
+
+## Cambiar el fondo
+
+Reemplaza este archivo:
+
+```text
+assets/img/fondo-montanas.jpg
+```
+
+Mantén el mismo nombre para no modificar el CSS.
+
+## Cambiar textos de cartas
+
+Edita `index.html` y busca estas secciones:
+
+```text
+carta-esposa
+carta-rene
+carta-jesus
+carta-diego
+carta-padre
+```
+
+Ahí puedes pegar las cartas finales.
+
+## Agregar fotos
+
+Guarda las fotos en:
+
+```text
+assets/img/recuerdos/
+```
+
+Luego puedes reemplazar los bloques `.photo-placeholder` por imágenes, por ejemplo:
+
+```html
+<img src="assets/img/recuerdos/foto1.jpg" alt="Recuerdo familiar" />
+```
+
+Si agregas imágenes, usa archivos comprimidos para celular, idealmente menores a 500 KB por imagen.
