@@ -1,49 +1,35 @@
-# Feliz Día del Padre - Papá René Guzmán
+# Página Día del Padre - René Guzmán
 
-Página web estática estilo cowboy/country para regalar en el Día del Padre.
+Proyecto listo para GitHub Pages.
 
-## Secciones incluidas
+## Estructura
 
-- Carta de tu esposa
-- Carta René
-- Carta Jesús
-- Carta Diego
-- Recuerdos
-- Juego de tiro al blanco con dificultad: fácil, media, difícil y pro
-
-## Cómo abrir la página
-
-Abre el archivo `index.html` en cualquier navegador.
-
-## Cómo subir a GitHub Pages
-
-1. Crea un repositorio nuevo en GitHub.
-2. Sube todos los archivos de esta carpeta.
-3. Entra a `Settings` > `Pages`.
-4. En `Branch`, selecciona `main` y carpeta `/root`.
-5. Guarda los cambios.
-6. GitHub te dará un enlace público.
-
-## Cómo cambiar las cartas
-
-Abre `index.html` y busca estas secciones:
-
-- `carta-esposa`
-- `carta-rene`
-- `carta-jesus`
-- `carta-diego`
-
-Reemplaza los textos provisionales por las cartas reales.
-
-## Cómo agregar fotos
-
-1. Copia tus fotos dentro de `assets/img/`.
-2. En `index.html`, reemplaza las tarjetas de ejemplo por imágenes.
-
-Ejemplo:
-
-```html
-<img src="assets/img/foto1.jpg" alt="Recuerdo familiar" />
+```text
+index.html
+assets/css/styles.css
+assets/js/app.js
+assets/img/portada.jpg
+assets/img/recuerdos/
+assets/audio/
 ```
 
-Después podemos ajustar esta sección para que tenga carrusel, collage o visor de fotos.
+## Orden del menú
+
+1. Carta de tu esposa
+2. Carta René
+3. Carta Jesús
+4. Carta Diego
+5. Recuerdos
+6. Carta a mi padre
+7. Juego: tiro al blanco
+
+La sección **Carta a mi padre** está pensada como una carta de René Guzmán para su padre fallecido, es decir, para honrar la memoria del abuelo.
+
+## Para subir a GitHub Pages
+
+1. Crea un repositorio en GitHub.
+2. Sube todos los archivos respetando la estructura.
+3. Entra a Settings > Pages.
+4. Selecciona Deploy from branch.
+5. Elige main y carpeta /root.
+6. Guarda.

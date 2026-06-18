@@ -3,187 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Página especial de Día del Padre para René Guzmán." />
-  <title>!Feliz Día del Padre, para un papá aún mas padre!</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <title>Feliz Día del Padre | René Guzmán</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <div class="background-overlay"></div>
-
-  <main class="app-shell">
-    <section id="home" class="hero active-view">
-      <p class="eyebrow">Un regalo hecho con amor</p>
-      <h1>Feliz Día del Padre, Papá René Guzmán</h1>
-      <p class="hero-text">
-        Esta página es para guardar cartas, recuerdos y un pequeño juego estilo western,
-        para que puedas abrirla cada vez que quieras recordar cuánto te amamos.
-      </p>
-
-      <div class="sheriff-badge" aria-hidden="true">
-        <span>★</span>
-        <strong>Gracias, Papá</strong>
-        <span>★</span>
+  <main class="app">
+    <section id="home" class="view active">
+      <div class="hero-card">
+        <p class="eyebrow">Un regalo hecho con amor</p>
+        <h1>Feliz Día del Padre</h1>
+        <h2>Para René Guzmán</h2>
+        <p class="intro">Una página para guardar cartas, recuerdos y un momento especial dedicado a la familia.</p>
       </div>
 
-      <nav class="menu-grid" aria-label="Secciones principales">
-        <button class="wood-button" data-view="carta-esposa">Carta de tu esposa</button>
-        <button class="wood-button" data-view="carta-rene">Carta René</button>
-        <button class="wood-button" data-view="carta-jesus">Carta Jesús</button>
-        <button class="wood-button" data-view="carta-diego">Carta Diego</button>
-        <button class="wood-button" data-view="recuerdos">Recuerdos</button>
-        <button class="wood-button accent" data-view="juego">Juego: tiro al blanco</button>
+      <nav class="menu-grid" aria-label="Menú principal">
+        <button class="cowboy-btn" data-open="carta-esposa">Carta de tu esposa</button>
+        <button class="cowboy-btn" data-open="carta-rene">Carta René</button>
+        <button class="cowboy-btn" data-open="carta-jesus">Carta Jesús</button>
+        <button class="cowboy-btn" data-open="carta-diego">Carta Diego</button>
+        <button class="cowboy-btn" data-open="recuerdos">Recuerdos</button>
+        <button class="cowboy-btn special" data-open="carta-padre">Carta a mi padre</button>
       </nav>
+
+      <button class="game-entry" data-open="juego">Juego: tiro al blanco</button>
     </section>
 
-    <section id="carta-esposa" class="page-view">
-      <article class="parchment">
-        <p class="letter-label">Para René</p>
+    <section id="carta-esposa" class="view">
+      <article class="paper">
         <h2>Carta de tu esposa</h2>
         <p>Mi querido René:</p>
-        <p>
-          Aquí irá la carta de tu esposa. Este espacio está preparado para una carta larga,
-          íntima y especial, escrita como si estuviera sobre un pergamino antiguo.
-        </p>
-        <p>
-          Puedes reemplazar este texto cuando tengas la carta definitiva. La página conservará
-          el estilo country y el efecto de papel envejecido.
-        </p>
-        <p class="signature">Con amor, tu esposa.</p>
+        <p>Aquí irá la carta de tu esposa. Este espacio está reservado para palabras llenas de amor, agradecimiento y recuerdos compartidos.</p>
+        <p>Gracias por ser parte esencial de nuestra familia, por tu esfuerzo, tu compañía y tu forma de cuidar a quienes amas.</p>
+        <p class="signature">Con amor,<br />Tu esposa</p>
       </article>
-      <button class="back-button" data-view="home">Volver al inicio</button>
+      <button class="back-btn" data-back>Volver</button>
     </section>
 
-    <section id="carta-rene" class="page-view">
-      <article class="parchment">
-        <p class="letter-label">De René para su papá</p>
+    <section id="carta-rene" class="view">
+      <article class="paper">
         <h2>Carta René</h2>
         <p>Papá:</p>
-        <p>
-          Esta carta será mi forma de decirte cuánto te amo, cuánto te admiro y lo mucho que
-          significa para mí llevar tu nombre.
-        </p>
-        <p>
-          Aquí después podemos escribir una carta más personal, con recuerdos reales, momentos
-          importantes y palabras que sientas tuyas.
-        </p>
-        <p class="signature">Con todo mi cariño, René.</p>
+        <p>Aquí irá mi carta para ti. Quiero que este espacio conserve lo mucho que te admiro, lo agradecido que estoy contigo y lo importante que eres para mí.</p>
+        <p>Gracias por tu ejemplo, por tu trabajo y por todo lo que has hecho por nosotros.</p>
+        <p class="signature">Con cariño,<br />René</p>
       </article>
-      <button class="back-button" data-view="home">Volver al inicio</button>
+      <button class="back-btn" data-back>Volver</button>
     </section>
 
-    <section id="carta-jesus" class="page-view">
-      <article class="parchment">
-        <p class="letter-label">De Jesús</p>
+    <section id="carta-jesus" class="view">
+      <article class="paper">
         <h2>Carta Jesús</h2>
         <p>Papá:</p>
-        <p>
-          Aquí irá la carta de Jesús. El diseño está listo para que el mensaje se vea como una
-          carta guardada con cariño durante mucho tiempo.
-        </p>
-        <p>
-          Puedes cambiar este texto directamente en el archivo index.html cuando ya tengas la carta.
-        </p>
-        <p class="signature">Con cariño, Jesús.</p>
+        <p>Aquí irá la carta de Jesús. Un mensaje para agradecerte por los momentos vividos, tus consejos y el amor que has dado como padre.</p>
+        <p>Este espacio puede llenarse con recuerdos, frases y palabras personales.</p>
+        <p class="signature">Con cariño,<br />Jesús</p>
       </article>
-      <button class="back-button" data-view="home">Volver al inicio</button>
+      <button class="back-btn" data-back>Volver</button>
     </section>
 
-    <section id="carta-diego" class="page-view">
-      <article class="parchment">
-        <p class="letter-label">De Diego</p>
+    <section id="carta-diego" class="view">
+      <article class="paper">
         <h2>Carta Diego</h2>
         <p>Papá:</p>
-        <p>
-          Aquí irá la carta de Diego. Puede ser una carta breve, una carta larga o una colección
-          de frases y recuerdos.
-        </p>
-        <p>
-          La página ya está preparada para mantener la estética western y sentimental.
-        </p>
-        <p class="signature">Con cariño, Diego.</p>
+        <p>Aquí irá la carta de Diego. Un lugar para expresar cariño, gratitud y recuerdos especiales contigo.</p>
+        <p>Gracias por estar presente y por ser una persona tan importante para la familia.</p>
+        <p class="signature">Con cariño,<br />Diego</p>
       </article>
-      <button class="back-button" data-view="home">Volver al inicio</button>
+      <button class="back-btn" data-back>Volver</button>
     </section>
 
-    <section id="recuerdos" class="page-view">
-      <div class="panel memories-panel">
-        <p class="eyebrow">Galería familiar</p>
-        <h2>Recuerdos</h2>
-        <p>
-          Coloca tus fotos dentro de <strong>assets/img/</strong> y luego cambia los nombres en el archivo
-          <strong>index.html</strong>. Por ahora dejé tarjetas de ejemplo para que veas el diseño.
-        </p>
-        <div class="memory-grid">
-          <div class="memory-card"><span>Foto familiar 1</span></div>
-          <div class="memory-card"><span>Foto familiar 2</span></div>
-          <div class="memory-card"><span>Foto familiar 3</span></div>
-          <div class="memory-card"><span>Foto familiar 4</span></div>
-          <div class="memory-card"><span>Foto familiar 5</span></div>
-          <div class="memory-card"><span>Foto familiar 6</span></div>
-        </div>
-      </div>
-      <button class="back-button" data-view="home">Volver al inicio</button>
-    </section> 
-
-    <section id="carta-padre" class="section hidden">
-      <div class="paper-card">
+    <section id="carta-padre" class="view">
+      <article class="paper memorial">
         <h2>Carta a mi padre</h2>
-    
-        <p>Querido papá René Guzmán:</p>
-    
-        <p>
-          Esta carta es para decirte cuánto te amo, cuánto te admiro
-          y lo agradecido que estoy por tenerte como mi papá.
-        </p>
-    
-        <p>
-          Gracias por cada consejo, cada esfuerzo y cada momento que has dado
-          por nosotros. Esta página es solo un pequeño detalle para recordarte
-          lo importante que eres en nuestras vidas.
-        </p>
+        <p>Querido papá:</p>
+        <p>Este espacio está pensado como una carta de René Guzmán para su padre, tu abuelo, quien ya falleció.</p>
+        <p>Aquí podrá escribirle aquello que quizá quedó pendiente, darle gracias por sus enseñanzas, recordarlo con cariño y decirle que su presencia sigue viva en la familia.</p>
+        <p>La idea es que esta carta sea íntima, respetuosa y especial; un momento para honrar su memoria en este Día del Padre.</p>
+        <p class="signature">Con amor y recuerdo,<br />Tu hijo René</p>
+      </article>
+      <button class="back-btn" data-back>Volver</button>
+    </section>
+
+    <section id="recuerdos" class="view">
+      <div class="album">
+        <h2>Recuerdos</h2>
+        <p>Agrega aquí fotografías familiares. Puedes reemplazar los espacios por imágenes dentro de <strong>assets/img/recuerdos/</strong>.</p>
+        <div class="gallery">
+          <div class="photo-slot">Foto 1</div>
+          <div class="photo-slot">Foto 2</div>
+          <div class="photo-slot">Foto 3</div>
+          <div class="photo-slot">Foto 4</div>
+          <div class="photo-slot">Foto 5</div>
+          <div class="photo-slot">Foto 6</div>
+        </div>
       </div>
+      <button class="back-btn" data-back>Volver</button>
+    </section>
 
-  <button class="back-btn" onclick="volverInicio()">Volver</button>
-</section>
+    <section id="juego" class="view">
+      <div class="game-card">
+        <h2>Juego: tiro al blanco</h2>
+        <p>Elige dificultad, presiona iniciar y acierta al blanco antes de que termine el tiempo.</p>
 
-    <section id="juego" class="page-view">
-      <div class="panel game-panel">
-        <p class="eyebrow">Mini juego western</p>
-        <h2>Tiro al blanco</h2>
-        <p>
-          Elige una dificultad y toca los blancos antes de que termine el tiempo.
-          En difícil y pro los blancos duran menos y aparecen más rápido.
-        </p>
-
-        <div class="difficulty-row" aria-label="Dificultad del juego">
-          <button class="difficulty active" data-difficulty="facil">Fácil</button>
-          <button class="difficulty" data-difficulty="media">Media</button>
-          <button class="difficulty" data-difficulty="dificil">Difícil</button>
-          <button class="difficulty" data-difficulty="pro">Pro</button>
+        <div class="game-controls">
+          <select id="difficulty">
+            <option value="facil">Fácil</option>
+            <option value="media">Media</option>
+            <option value="dificil">Difícil</option>
+            <option value="pro">Pro</option>
+          </select>
+          <button id="startGame">Iniciar</button>
         </div>
 
-        <div class="scoreboard">
+        <div class="score-board">
           <span>Puntos: <strong id="score">0</strong></span>
-          <span>Fallos: <strong id="misses">0</strong></span>
-          <span>Tiempo: <strong id="timeLeft">30</strong>s</span>
+          <span>Tiempo: <strong id="timer">30</strong>s</span>
+          <span>Nivel: <strong id="levelLabel">Fácil</strong></span>
         </div>
 
-        <div id="gameArea" class="game-area" aria-label="Área de tiro al blanco">
-          <div class="saloon-sign">SALÓN RENÉ</div>
-          <p class="game-hint">Presiona iniciar para jugar.</p>
-        </div>
-
-        <div class="game-actions">
-          <button id="startGame" class="wood-button small">Iniciar juego</button>
-          <button id="resetGame" class="wood-button small secondary">Reiniciar</button>
+        <div id="range" class="range">
+          <button id="target" class="target" aria-label="Blanco">★</button>
         </div>
 
         <p id="gameMessage" class="game-message">Listo para jugar.</p>
       </div>
-      <button class="back-button" data-view="home">Volver al inicio</button>
+      <button class="back-btn" data-back>Volver</button>
     </section>
   </main>
 
