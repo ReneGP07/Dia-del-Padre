@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página especial de Día del Padre para René Guzmán." />
+  <title>Feliz Día del Padre, Papá René</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <main class="app-shell">
+    <section id="home" class="hero active-view">
+      <p class="eyebrow">Un regalo hecho con amor</p>
+      <h1>Feliz Día del Padre, Papá René Guzmán</h1>
+      <p class="hero-text">
+        Esta página es para guardar cartas, recuerdos y un pequeño juego estilo western,
+        para que puedas abrirla cada vez que quieras recordar cuánto te queremos.
+      </p>
+
+      <div class="sheriff-badge" aria-hidden="true">
+        <span>★</span>
+        <strong>Gracias, Papá</strong>
+        <span>★</span>
+      </div>
+
+      <nav class="menu-grid" aria-label="Secciones principales">
+        <button class="wood-button" data-view="carta-esposa">Carta de tu esposa</button>
+        <button class="wood-button" data-view="carta-rene">Carta René</button>
+        <button class="wood-button" data-view="carta-jesus">Carta Jesús</button>
+        <button class="wood-button" data-view="carta-diego">Carta Diego</button>
+        <button class="wood-button" data-view="recuerdos">Recuerdos</button>
+        <button class="wood-button accent" data-view="juego">Juego: tiro al blanco</button>
+      </nav>
+    </section>
+
+    <section id="carta-esposa" class="page-view">
+      <article class="parchment">
+        <p class="letter-label">Para René</p>
+        <h2>Carta de tu esposa</h2>
+        <p>Mi querido René:</p>
+        <p>
+          Aquí irá la carta de tu esposa. Este espacio está preparado para una carta larga,
+          íntima y especial, escrita como si estuviera sobre un pergamino antiguo.
+        </p>
+        <p>
+          Puedes reemplazar este texto cuando tengas la carta definitiva. La página conservará
+          el estilo country y el efecto de papel envejecido.
+        </p>
+        <p class="signature">Con amor, tu esposa.</p>
+      </article>
+      <button class="back-button" data-view="home">Volver al inicio</button>
+    </section>
+
+    <section id="carta-rene" class="page-view">
+      <article class="parchment">
+        <p class="letter-label">De René para su papá</p>
+        <h2>Carta René</h2>
+        <p>Papá:</p>
+        <p>
+          Esta carta será mi forma de decirte cuánto te amo, cuánto te admiro y lo mucho que
+          significa para mí llevar tu nombre.
+        </p>
+        <p>
+          Aquí después podemos escribir una carta más personal, con recuerdos reales, momentos
+          importantes y palabras que sientas tuyas.
+        </p>
+        <p class="signature">Con todo mi cariño, René.</p>
+      </article>
+      <button class="back-button" data-view="home">Volver al inicio</button>
+    </section>
+
+    <section id="carta-jesus" class="page-view">
+      <article class="parchment">
+        <p class="letter-label">De Jesús</p>
+        <h2>Carta Jesús</h2>
+        <p>Papá:</p>
+        <p>
+          Aquí irá la carta de Jesús. El diseño está listo para que el mensaje se vea como una
+          carta guardada con cariño durante mucho tiempo.
+        </p>
+        <p>
+          Puedes cambiar este texto directamente en el archivo index.html cuando ya tengas la carta.
+        </p>
+        <p class="signature">Con cariño, Jesús.</p>
+      </article>
+      <button class="back-button" data-view="home">Volver al inicio</button>
+    </section>
+
+    <section id="carta-diego" class="page-view">
+      <article class="parchment">
+        <p class="letter-label">De Diego</p>
+        <h2>Carta Diego</h2>
+        <p>Papá:</p>
+        <p>
+          Aquí irá la carta de Diego. Puede ser una carta breve, una carta larga o una colección
+          de frases y recuerdos.
+        </p>
+        <p>
+          La página ya está preparada para mantener la estética western y sentimental.
+        </p>
+        <p class="signature">Con cariño, Diego.</p>
+      </article>
+      <button class="back-button" data-view="home">Volver al inicio</button>
+    </section>
+
+    <section id="recuerdos" class="page-view">
+      <div class="panel memories-panel">
+        <p class="eyebrow">Galería familiar</p>
+        <h2>Recuerdos</h2>
+        <p>
+          Coloca tus fotos dentro de <strong>assets/img/</strong> y luego cambia los nombres en el archivo
+          <strong>index.html</strong>. Por ahora dejé tarjetas de ejemplo para que veas el diseño.
+        </p>
+        <div class="memory-grid">
+          <div class="memory-card"><span>Foto familiar 1</span></div>
+          <div class="memory-card"><span>Foto familiar 2</span></div>
+          <div class="memory-card"><span>Foto familiar 3</span></div>
+          <div class="memory-card"><span>Foto familiar 4</span></div>
+          <div class="memory-card"><span>Foto familiar 5</span></div>
+          <div class="memory-card"><span>Foto familiar 6</span></div>
+        </div>
+      </div>
+      <button class="back-button" data-view="home">Volver al inicio</button>
+    </section>
+
+    <section id="juego" class="page-view">
+      <div class="panel game-panel">
+        <p class="eyebrow">Mini juego western</p>
+        <h2>Tiro al blanco</h2>
+        <p>
+          Elige una dificultad y toca los blancos antes de que termine el tiempo.
+          En difícil y pro los blancos duran menos y aparecen más rápido.
+        </p>
+
+        <div class="difficulty-row" aria-label="Dificultad del juego">
+          <button class="difficulty active" data-difficulty="facil">Fácil</button>
+          <button class="difficulty" data-difficulty="media">Media</button>
+          <button class="difficulty" data-difficulty="dificil">Difícil</button>
+          <button class="difficulty" data-difficulty="pro">Pro</button>
+        </div>
+
+        <div class="scoreboard">
+          <span>Puntos: <strong id="score">0</strong></span>
+          <span>Fallos: <strong id="misses">0</strong></span>
+          <span>Tiempo: <strong id="timeLeft">30</strong>s</span>
+        </div>
+
+        <div id="gameArea" class="game-area" aria-label="Área de tiro al blanco">
+          <div class="saloon-sign">SALÓN RENÉ</div>
+          <p class="game-hint">Presiona iniciar para jugar.</p>
+        </div>
+
+        <div class="game-actions">
+          <button id="startGame" class="wood-button small">Iniciar juego</button>
+          <button id="resetGame" class="wood-button small secondary">Reiniciar</button>
+        </div>
+
+        <p id="gameMessage" class="game-message">Listo para jugar.</p>
+      </div>
+      <button class="back-button" data-view="home">Volver al inicio</button>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
