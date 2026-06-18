@@ -1,159 +1,107 @@
-const views = document.querySelectorAll('.hero, .page-view');
-const navButtons = document.querySelectorAll('[data-view]');
+const views = document.querySelectorAll('.view');
+const openButtons = document.querySelectorAll('[data-open]');
+const backButtons = document.querySelectorAll('[data-back]');
 
-function showView(viewId) {
-  views.forEach(view => view.classList.remove('active-view'));
-  const nextView = document.getElementById(viewId);
-  if (nextView) {
-    nextView.classList.add('active-view');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+function showView(id) {
+  views.forEach(view => view.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-navButtons.forEach(button => {
-  button.addEventListener('click', () => showView(button.dataset.view));
+openButtons.forEach(button => {
+  button.addEventListener('click', () => showView(button.dataset.open));
 });
 
-const difficultyButtons = document.querySelectorAll('.difficulty');
-const gameArea = document.getElementById('gameArea');
+backButtons.forEach(button => {
+  button.addEventListener('click', () => showView('home'));
+});
+
+const difficulty = document.getElementById('difficulty');
 const startButton = document.getElementById('startGame');
-const resetButton = document.getElementById('resetGame');
-const scoreEl = document.getElementById('score');
-const missesEl = document.getElementById('misses');
-const timeLeftEl = document.getElementById('timeLeft');
+const target = document.getElementById('target');
+const range = document.getElementById('range');
+const scoreLabel = document.getElementById('score');
+const timerLabel = document.getElementById('timer');
+const levelLabel = document.getElementById('levelLabel');
 const gameMessage = document.getElementById('gameMessage');
 
-const difficulties = {
-  facil: { label: 'Fácil', targetSize: 86, spawnMs: 980, visibleMs: 1250, duration: 30, points: 10 },
-  media: { label: 'Media', targetSize: 72, spawnMs: 760, visibleMs: 900, duration: 30, points: 15 },
-  dificil: { label: 'Difícil', targetSize: 58, spawnMs: 600, visibleMs: 680, duration: 30, points: 20 },
-  pro: { label: 'Pro', targetSize: 44, spawnMs: 450, visibleMs: 500, duration: 30, points: 30 }
+const settings = {
+  facil: { label: 'Fácil', time: 35, size: 82, points: 5, moveDelay: 950 },
+  media: { label: 'Media', time: 30, size: 68, points: 10, moveDelay: 700 },
+  dificil: { label: 'Difícil', time: 25, size: 54, points: 15, moveDelay: 480 },
+  pro: { label: 'Pro', time: 20, size: 42, points: 25, moveDelay: 300 }
 };
 
-let currentDifficulty = 'facil';
 let score = 0;
-let misses = 0;
-let timeLeft = difficulties.facil.duration;
-let gameRunning = false;
-let spawnTimer = null;
-let countdownTimer = null;
+let timeLeft = 30;
+let timerId = null;
+let moveId = null;
+let playing = false;
 
-function updateScoreboard() {
-  scoreEl.textContent = score;
-  missesEl.textContent = misses;
-  timeLeftEl.textContent = timeLeft;
+function selectedConfig() {
+  return settings[difficulty.value];
 }
 
-function clearTargets() {
-  gameArea.querySelectorAll('.target').forEach(target => target.remove());
-}
-
-function setDifficulty(difficulty) {
-  if (gameRunning) return;
-  currentDifficulty = difficulty;
-  difficultyButtons.forEach(button => {
-    button.classList.toggle('active', button.dataset.difficulty === difficulty);
-  });
-  timeLeft = difficulties[difficulty].duration;
-  updateScoreboard();
-  gameMessage.textContent = `Dificultad seleccionada: ${difficulties[difficulty].label}.`;
-}
-
-difficultyButtons.forEach(button => {
-  button.addEventListener('click', () => setDifficulty(button.dataset.difficulty));
-});
-
-function spawnTarget() {
-  if (!gameRunning) return;
-
-  const config = difficulties[currentDifficulty];
-  const target = document.createElement('button');
-  target.className = 'target';
-  target.type = 'button';
-  target.setAttribute('aria-label', 'Blanco');
-
-  const areaRect = gameArea.getBoundingClientRect();
-  const size = config.targetSize;
-  const maxX = Math.max(0, areaRect.width - size - 18);
-  const maxY = Math.max(80, areaRect.height - size - 18);
-
-  const x = Math.floor(Math.random() * maxX) + 9;
-  const y = Math.floor(Math.random() * (maxY - 76)) + 76;
+function moveTarget() {
+  const rect = range.getBoundingClientRect();
+  const size = selectedConfig().size;
+  const x = Math.max(0, Math.random() * (rect.width - size));
+  const y = Math.max(0, Math.random() * (rect.height - size));
 
   target.style.width = `${size}px`;
   target.style.height = `${size}px`;
   target.style.left = `${x}px`;
   target.style.top = `${y}px`;
+}
 
-  let hit = false;
-
-  target.addEventListener('click', event => {
-    event.stopPropagation();
-    if (!gameRunning || hit) return;
-    hit = true;
-    score += config.points;
-    updateScoreboard();
-    target.remove();
-  });
-
-  gameArea.appendChild(target);
-
-  setTimeout(() => {
-    if (!hit && target.isConnected && gameRunning) {
-      misses += 1;
-      updateScoreboard();
-      target.remove();
-    }
-  }, config.visibleMs);
+function stopGame(message) {
+  playing = false;
+  clearInterval(timerId);
+  clearInterval(moveId);
+  gameMessage.textContent = message;
 }
 
 function startGame() {
-  if (gameRunning) return;
-  const config = difficulties[currentDifficulty];
+  const config = selectedConfig();
   score = 0;
-  misses = 0;
-  timeLeft = config.duration;
-  gameRunning = true;
-  clearTargets();
-  updateScoreboard();
-  gameMessage.textContent = 'Juego iniciado. Toca los blancos.';
+  timeLeft = config.time;
+  playing = true;
 
-  spawnTarget();
-  spawnTimer = setInterval(spawnTarget, config.spawnMs);
-  countdownTimer = setInterval(() => {
+  scoreLabel.textContent = score;
+  timerLabel.textContent = timeLeft;
+  levelLabel.textContent = config.label;
+  gameMessage.textContent = 'Dispara al blanco.';
+
+  clearInterval(timerId);
+  clearInterval(moveId);
+  moveTarget();
+
+  timerId = setInterval(() => {
     timeLeft -= 1;
-    updateScoreboard();
-    if (timeLeft <= 0) endGame();
+    timerLabel.textContent = timeLeft;
+
+    if (timeLeft <= 0) {
+      stopGame(`Juego terminado. Puntuación final: ${score} puntos.`);
+    }
   }, 1000);
-}
 
-function endGame() {
-  gameRunning = false;
-  clearInterval(spawnTimer);
-  clearInterval(countdownTimer);
-  clearTargets();
-
-  let result = 'Buen intento.';
-  if (score >= 420) result = 'Nivel vaquero legendario.';
-  else if (score >= 260) result = 'Muy buen tiro.';
-  else if (score >= 140) result = 'Buen pulso, sheriff.';
-
-  gameMessage.textContent = `${result} Puntuación final: ${score}. Fallos: ${misses}.`;
-}
-
-function resetGame() {
-  gameRunning = false;
-  clearInterval(spawnTimer);
-  clearInterval(countdownTimer);
-  clearTargets();
-  score = 0;
-  misses = 0;
-  timeLeft = difficulties[currentDifficulty].duration;
-  updateScoreboard();
-  gameMessage.textContent = 'Juego reiniciado.';
+  moveId = setInterval(moveTarget, config.moveDelay);
 }
 
 startButton.addEventListener('click', startGame);
-resetButton.addEventListener('click', resetGame);
 
-updateScoreboard();
+target.addEventListener('click', () => {
+  if (!playing) return;
+  const config = selectedConfig();
+  score += config.points;
+  scoreLabel.textContent = score;
+  gameMessage.textContent = `Buen tiro. +${config.points} puntos.`;
+  moveTarget();
+});
+
+difficulty.addEventListener('change', () => {
+  const config = selectedConfig();
+  levelLabel.textContent = config.label;
+  timerLabel.textContent = config.time;
+  if (playing) startGame();
+});
