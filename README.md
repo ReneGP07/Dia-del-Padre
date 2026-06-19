@@ -15,51 +15,40 @@ assets/
   audio/
 ```
 
-## Cómo subirlo a GitHub Pages
+## Funciones incluidas
 
-1. Crea un repositorio en GitHub.
-2. Sube `index.html`, la carpeta `assets` y este `README.md`.
-3. Entra a `Settings > Pages`.
-4. En `Source`, elige `Deploy from a branch`.
-5. Selecciona `main` y `/root`.
-6. Guarda los cambios.
+- Diseño country/cowboy optimizado para celular.
+- Cartas tipo pergamino.
+- Orden de hijos: René, Jesús y Diego.
+- Sección `Carta a mi padre`, pensada para que René Guzmán escriba a su papá fallecido.
+- Juego de tiro al blanco con dificultad: fácil, media, difícil y pro.
+- Edición de cartas desde la página con contraseña.
 
-## Cambiar el fondo
+## Contraseñas de edición
 
-Reemplaza este archivo:
+- Carta de tu esposa: `esposa123`
+- Carta René: `rene123`
+- Carta Jesús: `jesus123`
+- Carta Diego: `diego123`
+- Carta a mi padre: `padre123`
 
-```text
-assets/img/fondo-montanas.jpg
-```
+## Importante sobre la edición
 
-Mantén el mismo nombre para no modificar el CSS.
+Esta página funciona en GitHub Pages, que es un sitio estático. Por eso, las cartas editadas desde la página se guardan en el navegador usando `localStorage`.
 
-## Cambiar textos de cartas
+Esto significa que si una persona edita una carta desde su celular, el cambio queda guardado en ese celular. No se sincroniza automáticamente con otros celulares ni con GitHub.
 
-Edita `index.html` y busca estas secciones:
+Para que tu papá vea las cartas finales desde su celular, tienes dos opciones:
 
-```text
-carta-esposa
-carta-rene
-carta-jesus
-carta-diego
-carta-padre
-```
+1. Editar las cartas directamente en el archivo `index.html` antes de publicar.
+2. Usar esta función de edición en un solo dispositivo antes de entregarle la página.
 
-Ahí puedes pegar las cartas finales.
+Para edición real compartida entre varios celulares se necesita una base de datos externa, por ejemplo Firebase o Supabase.
 
-## Agregar fotos
+## Publicación en GitHub Pages
 
-Guarda las fotos en:
-
-```text
-assets/img/recuerdos/
-```
-
-Luego puedes reemplazar los bloques `.photo-placeholder` por imágenes, por ejemplo:
-
-```html
-<img src="assets/img/recuerdos/foto1.jpg" alt="Recuerdo familiar" />
-```
-
-Si agregas imágenes, usa archivos comprimidos para celular, idealmente menores a 500 KB por imagen.
+1. Sube todos los archivos al repositorio.
+2. Entra a `Settings > Pages`.
+3. En `Source`, selecciona `Deploy from a branch`.
+4. Selecciona `main` y carpeta `/root`.
+5. Guarda y espera el enlace público.
