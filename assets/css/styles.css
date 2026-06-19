@@ -639,3 +639,234 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Edición de cartas: estilo tipo escribir/enviar mensaje */
+.section-actions {
+  width: min(860px, 100%);
+  margin: 18px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.edit-btn {
+  min-height: var(--tap);
+  border: 2px solid rgba(255, 225, 166, 0.54);
+  border-radius: var(--radius-md);
+  color: var(--cream);
+  font-weight: 900;
+  cursor: pointer;
+  padding: 13px 22px;
+  background:
+    linear-gradient(180deg, rgba(218, 139, 62, 0.96), rgba(107, 47, 19, 0.98)),
+    radial-gradient(circle at top, rgba(255, 226, 163, 0.22), transparent 42%);
+  box-shadow: 0 10px 0 rgba(55, 24, 9, 0.96), 0 18px 28px rgba(0, 0, 0, 0.36);
+  transition: transform 0.16s ease, filter 0.16s ease, box-shadow 0.16s ease;
+  touch-action: manipulation;
+}
+
+.edit-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+}
+
+.edit-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 5px 0 rgba(55, 24, 9, 0.96), 0 10px 18px rgba(0, 0, 0, 0.34);
+}
+
+.letter-content p {
+  margin: 0 0 1.05em;
+  white-space: pre-wrap;
+}
+
+.letter-content p:last-child {
+  margin-bottom: 0;
+}
+
+.letter-content .signature {
+  margin-top: 1.35em;
+  font-weight: 700;
+  text-align: right;
+}
+
+.editor-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: max(16px, env(safe-area-inset-top)) 14px max(16px, env(safe-area-inset-bottom));
+  background: rgba(15, 6, 2, 0.74);
+  backdrop-filter: blur(8px);
+}
+
+.editor-modal.open {
+  display: flex;
+}
+
+.editor-dialog {
+  position: relative;
+  width: min(680px, 100%);
+  max-height: min(86vh, 820px);
+  overflow: auto;
+  border: 2px solid rgba(255, 222, 153, 0.72);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(92, 42, 17, 0.96), rgba(31, 13, 5, 0.98)),
+    radial-gradient(circle at top, rgba(240, 189, 103, 0.18), transparent 48%);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.58);
+  color: var(--cream);
+  padding: 26px;
+}
+
+.editor-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 225, 166, 0.45);
+  border-radius: 999px;
+  color: var(--cream);
+  background: rgba(0, 0, 0, 0.28);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.editor-kicker {
+  margin: 0 0 8px;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.editor-dialog h2 {
+  margin: 0 44px 8px 0;
+  font-size: clamp(1.55rem, 6vw, 2.4rem);
+}
+
+.editor-hint {
+  margin: 0 0 18px;
+  color: rgba(255, 240, 207, 0.88);
+  line-height: 1.65;
+}
+
+.password-step,
+.compose-step {
+  display: grid;
+  gap: 12px;
+}
+
+.password-step label,
+.compose-step label {
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.password-step input,
+.compose-step textarea {
+  width: 100%;
+  border: 2px solid rgba(255, 225, 166, 0.52);
+  border-radius: 18px;
+  background: rgba(255, 240, 207, 0.96);
+  color: #2e1609;
+  font: inherit;
+  box-shadow: inset 0 0 18px rgba(92, 42, 17, 0.20);
+}
+
+.password-step input {
+  min-height: 54px;
+  padding: 0 16px;
+}
+
+.compose-step textarea {
+  min-height: 320px;
+  padding: 18px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.compose-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.compose-footer span {
+  margin-right: auto;
+  color: rgba(255, 240, 207, 0.78);
+  font-size: 0.9rem;
+}
+
+.send-btn,
+.ghost-btn {
+  min-height: 50px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 225, 166, 0.54);
+  color: var(--cream);
+  font-weight: 900;
+  cursor: pointer;
+  padding: 12px 18px;
+}
+
+.send-btn {
+  background: linear-gradient(180deg, rgba(197, 67, 39, 0.98), rgba(113, 30, 17, 0.98));
+}
+
+.ghost-btn {
+  background: rgba(255, 240, 207, 0.12);
+}
+
+.editor-error {
+  min-height: 1.4em;
+  margin: 0;
+  color: #ffd3c6;
+  font-weight: 900;
+}
+
+@media (max-width: 560px) {
+  .section-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .section-actions .back-btn,
+  .section-actions .edit-btn {
+    width: 100%;
+  }
+
+  .editor-dialog {
+    padding: 22px 16px;
+    border-radius: 20px;
+  }
+
+  .compose-step textarea {
+    min-height: 280px;
+  }
+
+  .compose-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .compose-footer span,
+  .compose-footer button {
+    width: 100%;
+  }
+}
+
+@media (hover: none) {
+  .edit-btn:hover {
+    transform: none;
+    filter: none;
+  }
+}
