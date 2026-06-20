@@ -13,42 +13,27 @@
 </head>
 <body>
   <div class="site-bg" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
 
   <main class="app" id="app">
     <section id="home" class="view active" aria-labelledby="main-title">
       <header class="hero-card">
-        <p class="eyebrow">Un regalo hecho con amor</p>
+        <div class="hat">🤠</div>
+        <p class="eyebrow">Hecho con amor por tu familia</p>
         <h1 id="main-title">Feliz Día del Padre</h1>
         <p class="hero-name">Para René Guzmán</p>
         <p class="intro">
-          Una página creada para guardar cartas, recuerdos y un momento especial de familia.
+          Un rincón vaquero lleno de cartas, recuerdos y momentos para volver una y otra vez.
         </p>
       </header>
 
       <nav class="menu-grid" aria-label="Menú principal">
-        <button class="cowboy-btn" type="button" data-open="carta-esposa">
-          <span>Carta de tu esposa</span>
-        </button>
-
-        <button class="cowboy-btn" type="button" data-open="carta-rene">
-          <span>Carta René</span>
-        </button>
-
-        <button class="cowboy-btn" type="button" data-open="carta-jesus">
-          <span>Carta Jesús</span>
-        </button>
-
-        <button class="cowboy-btn" type="button" data-open="carta-diego">
-          <span>Carta Diego</span>
-        </button>
-
-        <button class="cowboy-btn" type="button" data-open="recuerdos">
-          <span>Recuerdos</span>
-        </button>
-
-        <button class="cowboy-btn special" type="button" data-open="carta-padre">
-          <span>Carta a mi padre</span>
-        </button>
+        <button class="cowboy-btn" type="button" data-open="carta-esposa"><span>Carta de tu esposa</span></button>
+        <button class="cowboy-btn" type="button" data-open="carta-rene"><span>Carta René</span></button>
+        <button class="cowboy-btn" type="button" data-open="carta-jesus"><span>Carta Jesús</span></button>
+        <button class="cowboy-btn" type="button" data-open="carta-diego"><span>Carta Diego</span></button>
+        <button class="cowboy-btn" type="button" data-open="recuerdos"><span>Recuerdos</span></button>
+        <button class="cowboy-btn special" type="button" data-open="carta-padre"><span>Carta a mi padre</span></button>
       </nav>
 
       <button class="game-entry" type="button" data-open="juego">
@@ -56,111 +41,117 @@
       </button>
     </section>
 
-    <section id="carta-esposa" class="view letter-view" aria-labelledby="titulo-esposa">
-      <article class="paper editable-letter" data-letter-key="esposa">
+    <section id="carta-esposa" class="view" aria-labelledby="titulo-esposa" data-letter-id="carta-esposa" data-password="esposa123">
+      <article class="paper">
         <p class="paper-label">Carta especial</p>
         <h2 id="titulo-esposa">Carta de tu esposa</h2>
-        <div id="letter-esposa" class="letter-content">
-          <p>Mi querido René:</p>
-          <p>Aquí irá la carta de tu esposa. Este espacio está reservado para palabras llenas de amor, agradecimiento y recuerdos compartidos.</p>
-          <p>Gracias por ser parte esencial de nuestra familia, por tu esfuerzo, tu compañía y tu forma de cuidar a quienes amas.</p>
-          <p class="signature">Con amor,<br />Tu esposa</p>
-        </div>
+        <div class="letter-content" data-letter-content><p>Mi amado esposo</p>
+        <p>Deseo que tengas el mejor de los días, que lo disfrutes y aprendas a dejarte querer a la manera de cada uno de nosotros.</p>
+        <p>Es tu día, vívelo, valóralo.<br />Tienes tres hermosos regalos que Dios te mandó; cada uno es una cajita llena de orgullo para ti 🎁</p>
+        <p>Gracias por ser parte esencial de nuestra familia, por tu esfuerzo, tu compañía y tu forma de cuidar a quienes amas.</p>
+        <p>Con amor,<br />Tu ojos</p>
+        <p>FELIZ DÍA DEL PADRE 😘</p></div>
       </article>
       <div class="section-actions">
         <button class="back-btn" type="button" data-back>Volver al inicio</button>
-        <button class="edit-btn" type="button" data-edit-letter="esposa">Editar carta</button>
+        <button class="edit-btn" type="button" data-edit-letter>Editar carta</button>
       </div>
     </section>
-
-    <section id="carta-rene" class="view letter-view" aria-labelledby="titulo-rene">
-      <article class="paper editable-letter" data-letter-key="rene">
+    <section id="carta-rene" class="view" aria-labelledby="titulo-rene" data-letter-id="carta-rene" data-password="rene123">
+      <article class="paper">
         <p class="paper-label">Primer hijo</p>
         <h2 id="titulo-rene">Carta René</h2>
-        <div id="letter-rene" class="letter-content">
-          <p>Papá:</p>
-          <p>Aquí irá mi carta para ti. Quiero que este espacio conserve lo mucho que te admiro, lo agradecido que estoy contigo y lo importante que eres para mí.</p>
-          <p>Gracias por tu ejemplo, por tu trabajo y por todo lo que has hecho por nosotros.</p>
-          <p class="signature">Con cariño,<br />René</p>
-        </div>
+        <div class="letter-content" data-letter-content><p>Papá:</p>
+        <p>Aquí puedes escribir tu carta para él.</p>
+        <p>Cuéntale lo que admiras, lo que le agradeces y los recuerdos que más guardas con cariño.</p>
+        <p>Con cariño,<br />René</p></div>
       </article>
       <div class="section-actions">
         <button class="back-btn" type="button" data-back>Volver al inicio</button>
-        <button class="edit-btn" type="button" data-edit-letter="rene">Editar carta</button>
+        <button class="edit-btn" type="button" data-edit-letter>Editar carta</button>
       </div>
     </section>
-
-    <section id="carta-jesus" class="view letter-view" aria-labelledby="titulo-jesus">
-      <article class="paper editable-letter" data-letter-key="jesus">
+    <section id="carta-jesus" class="view" aria-labelledby="titulo-jesus" data-letter-id="carta-jesus" data-password="jesus123">
+      <article class="paper">
         <p class="paper-label">Segundo hijo</p>
         <h2 id="titulo-jesus">Carta Jesús</h2>
-        <div id="letter-jesus" class="letter-content">
-          <p>Papá:</p>
-          <p>Aquí irá la carta de Jesús. Un mensaje para agradecerte por los momentos vividos, tus consejos y el amor que has dado como padre.</p>
-          <p>Este espacio puede llenarse con recuerdos, frases y palabras personales.</p>
-          <p class="signature">Con cariño,<br />Jesús</p>
-        </div>
+        <div class="letter-content" data-letter-content><p>Papá:</p>
+        <p>Aquí puedes escribir tu carta para él.</p>
+        <p>Este espacio está listo para llenarse con tus palabras, tus recuerdos y todo lo que quieras decirle en su día.</p>
+        <p>Con cariño,<br />Jesús</p></div>
       </article>
       <div class="section-actions">
         <button class="back-btn" type="button" data-back>Volver al inicio</button>
-        <button class="edit-btn" type="button" data-edit-letter="jesus">Editar carta</button>
+        <button class="edit-btn" type="button" data-edit-letter>Editar carta</button>
       </div>
     </section>
-
-    <section id="carta-diego" class="view letter-view" aria-labelledby="titulo-diego">
-      <article class="paper editable-letter" data-letter-key="diego">
+    <section id="carta-diego" class="view" aria-labelledby="titulo-diego" data-letter-id="carta-diego" data-password="diego123">
+      <article class="paper">
         <p class="paper-label">Tercer hijo</p>
         <h2 id="titulo-diego">Carta Diego</h2>
-        <div id="letter-diego" class="letter-content">
-          <p>Papá:</p>
-          <p>Aquí irá la carta de Diego. Un lugar para expresar cariño, gratitud y recuerdos especiales contigo.</p>
-          <p>Gracias por estar presente y por ser una persona tan importante para la familia.</p>
-          <p class="signature">Con cariño,<br />Diego</p>
-        </div>
+        <div class="letter-content" data-letter-content><p>Todo aquello que he de admirar<br />Y he de comprender<br />Te lo he de agradecer<br />Bajo tu sombrero me amparo<br />Y busco refugio<br />Queriendo escuchar<br />Cualquier consejo tuyo<br />Te felicito y admiro en tu día<br />Pues eres mi padre<br />Lo digo con alegría</p></div>
       </article>
       <div class="section-actions">
         <button class="back-btn" type="button" data-back>Volver al inicio</button>
-        <button class="edit-btn" type="button" data-edit-letter="diego">Editar carta</button>
+        <button class="edit-btn" type="button" data-edit-letter>Editar carta</button>
       </div>
     </section>
-
-    <section id="carta-padre" class="view letter-view" aria-labelledby="titulo-padre">
-      <article class="paper memorial editable-letter" data-letter-key="padre">
+    <section id="carta-padre" class="view" aria-labelledby="titulo-padre" data-letter-id="carta-padre" data-password="padre123">
+      <article class="paper memorial">
         <p class="paper-label">Para honrar su memoria</p>
         <h2 id="titulo-padre">Carta a mi padre</h2>
-        <div id="letter-padre" class="letter-content">
-          <p>Querido papá:</p>
-          <p>Este espacio está pensado como una carta de René Guzmán para su padre, tu abuelo, quien ya falleció.</p>
-          <p>Aquí podrá escribirle aquello que quizá quedó pendiente, darle gracias por sus enseñanzas, recordarlo con cariño y decirle que su presencia sigue viva en la familia.</p>
-          <p>La idea es que esta carta sea íntima, respetuosa y especial; un momento para honrar su memoria en este Día del Padre.</p>
-          <p class="signature">Con amor y recuerdo,<br />Tu hijo René</p>
-        </div>
+        <div class="letter-content" data-letter-content><p>Papá:</p>
+        <p>Han pasado algunos años desde que te fuiste, y aun así hay días en los que me descubro queriendo platicar contigo para contarte algo, pedirte una opinión o simplemente escucharte.</p>
+        <p>La vida siguió avanzando. Los años pasaron. Yo también cambié.</p>
+        <p>Y curiosamente, mientras más viejo me hago, más cosas entiendo de ti.</p>
+        <p>Cuando era joven veía a mi padre.</p>
+        <p>Hoy veo al hombre.</p>
+        <p>Veo los sacrificios que hiciste, las preocupaciones que cargaste en silencio, las decisiones difíciles que seguramente tomaste sin que nosotros nos diéramos cuenta. Veo las veces que pusiste a tu familia por delante de ti mismo y las veces que tuviste que ser fuerte aunque por dentro estuvieras cansado.</p>
+        <p>Muchas cosas que antes me parecían normales hoy las veo con otros ojos, porque ahora entiendo lo que cuesta construir una familia, sostener una casa, cuidar a los hijos y seguir adelante cuando nadie ve el esfuerzo.</p>
+        <p>Quiero darte las gracias.</p>
+        <p>Gracias por todo lo que me enseñaste, incluso por aquello que nunca dijiste con palabras.</p>
+        <p>Gracias por los valores que me dejaste, por el ejemplo de trabajo, por la responsabilidad, por la dignidad y por la fortaleza para enfrentar la vida.</p>
+        <p>No soy un padre perfecto con mis hijos, así como seguramente tú tampoco te considerabas un padre perfecto conmigo. Pero hoy entiendo que ninguno de nosotros estaba intentando ser perfecto. Estábamos intentando hacer lo mejor posible con lo que teníamos.</p>
+        <p>Y si hay algo que me llena de orgullo es saber que mucho de lo bueno que hay en mí nació contigo.</p>
+        <p>Tu legado no está en las cosas que dejaste.</p>
+        <p>Está en las personas que formaste.</p>
+        <p>Está en tus hijos.</p>
+        <p>Está en tus nietos.</p>
+        <p>Está en cada consejo o regaño tuyo que todavía recuerdo y en cada decisión en la que, sin darme cuenta, sigo preguntándome qué habrías hecho tú.</p>
+        <p>Ojalá hubieras tenido la oportunidad de ver algunas cosas que han pasado en estos años.</p>
+        <p>Ojalá hubiéramos compartido más conversaciones.</p>
+        <p>Ojalá hubiera podido decirte más veces cuánto te quería.</p>
+        <p>Pero si de algo estoy seguro, es de que el amor entre un padre y un hijo no termina cuando uno de los dos se va.</p>
+        <p>Simplemente cambia de lugar.</p>
+        <p>Hoy no puedo darte un abrazo.</p>
+        <p>Pero puedo honrarte viviendo con integridad, cuidando a mi familia y procurando dejar a mis hijos algo tan valioso como lo que tú me dejaste a mí.</p>
+        <p>Te extraño.</p>
+        <p>Te recuerdo.</p>
+        <p>Y te doy las gracias.</p>
+        <p>Con cariño y respeto,</p>
+        <p>Tu hijo.</p></div>
       </article>
       <div class="section-actions">
         <button class="back-btn" type="button" data-back>Volver al inicio</button>
-        <button class="edit-btn" type="button" data-edit-letter="padre">Editar carta</button>
+        <button class="edit-btn" type="button" data-edit-letter>Editar carta</button>
       </div>
     </section>
 
     <section id="recuerdos" class="view" aria-labelledby="titulo-recuerdos">
-      <div class="album">
-        <p class="section-label">Álbum familiar</p>
-        <h2 id="titulo-recuerdos">Recuerdos</h2>
-        <p>
-          Sustituye estos espacios por fotos familiares dentro de <strong>assets/img/recuerdos/</strong>.
-          La página está preparada para verse bien en celular.
-        </p>
-
-        <div class="gallery" aria-label="Galería de recuerdos">
-          <figure class="photo-card"><div class="photo-placeholder">Foto 1</div><figcaption>Un momento especial</figcaption></figure>
-          <figure class="photo-card"><div class="photo-placeholder">Foto 2</div><figcaption>Familia</figcaption></figure>
-          <figure class="photo-card"><div class="photo-placeholder">Foto 3</div><figcaption>Recuerdo favorito</figcaption></figure>
-          <figure class="photo-card"><div class="photo-placeholder">Foto 4</div><figcaption>Juntos</figcaption></figure>
-          <figure class="photo-card"><div class="photo-placeholder">Foto 5</div><figcaption>Celebración</figcaption></figure>
-          <figure class="photo-card"><div class="photo-placeholder">Foto 6</div><figcaption>Gracias, papá</figcaption></figure>
+      <div class="album-shell">
+        <div class="album-head">
+          <div>
+            <p class="section-label">Álbum familiar</p>
+            <h2 id="titulo-recuerdos">Recuerdos</h2>
+            <p class="album-copy">Una colección de momentos de mamá, papá y sus hijos, desde los primeros años hasta etapas más grandes, vista como un álbum divertido y lleno de cariño.</p>
+          </div>
+          <button class="mix-btn" id="shuffleMemories" type="button">Barajear recuerdos</button>
         </div>
+        <div id="memoryDeck" class="memory-deck" aria-label="Álbum de recuerdos"></div>
       </div>
-      <button class="back-btn" type="button" data-back>Volver al inicio</button>
+      <div class="section-actions single">
+        <button class="back-btn" type="button" data-back>Volver al inicio</button>
+      </div>
     </section>
 
     <section id="juego" class="view" aria-labelledby="titulo-juego">
@@ -196,37 +187,53 @@
 
         <p id="gameMessage" class="game-message">Listo para jugar.</p>
       </div>
-      <button class="back-btn" type="button" data-back>Volver al inicio</button>
+      <div class="section-actions single">
+        <button class="back-btn" type="button" data-back>Volver al inicio</button>
+      </div>
     </section>
   </main>
 
-
-  <div id="editorModal" class="editor-modal" aria-hidden="true">
-    <div class="editor-dialog" role="dialog" aria-modal="true" aria-labelledby="editorTitle">
-      <button id="closeEditor" class="editor-close" type="button" aria-label="Cerrar editor">×</button>
-      <p class="editor-kicker">Modo edición privado</p>
-      <h2 id="editorTitle">Editar carta</h2>
-      <p id="editorHint" class="editor-hint">Escribe la contraseña para editar esta carta.</p>
-
-      <div id="passwordStep" class="password-step">
-        <label for="letterPassword">Contraseña</label>
-        <input id="letterPassword" type="password" autocomplete="off" inputmode="text" placeholder="nombre123" />
-        <button id="unlockLetter" class="send-btn" type="button">Desbloquear</button>
-        <p id="passwordError" class="editor-error" aria-live="polite"></p>
+  <dialog id="editorModal" class="editor-modal">
+    <form method="dialog" class="editor-shell" id="editorForm">
+      <div class="editor-top">
+        <div>
+          <p class="section-label">Editar carta</p>
+          <h3 id="editorTitle">Escribe tu mensaje</h3>
+        </div>
+        <button type="button" class="ghost-btn" id="closeEditor">Cerrar</button>
       </div>
 
-      <div id="composeStep" class="compose-step" hidden>
-        <label for="letterText">Mensaje</label>
-        <textarea id="letterText" rows="12" placeholder="Escribe aquí la carta..."></textarea>
-        <div class="compose-footer">
-          <span id="autosaveStatus">Editando carta</span>
-          <button id="cancelEdit" class="ghost-btn" type="button">Cancelar</button>
-          <button id="saveLetter" class="send-btn" type="button">Enviar / guardar carta</button>
+      <div id="passwordStep" class="editor-step">
+        <label for="letterPassword">Contraseña</label>
+        <input id="letterPassword" type="password" autocomplete="off" placeholder="Ingresa la contraseña" />
+        <p class="mini-help">La contraseña protege la carta para que nadie más la modifique.</p>
+        <button type="button" class="send-btn" id="unlockLetter">Continuar</button>
+      </div>
+
+      <div id="composeStep" class="editor-step hidden">
+        <label for="messageInput">Tu mensaje</label>
+        <textarea id="messageInput" rows="12" placeholder="Escribe aquí tu carta como si enviaras un mensaje..."></textarea>
+        <div class="editor-actions">
+          <button type="button" class="ghost-btn" id="cancelCompose">Cancelar</button>
+          <button type="button" class="send-btn" id="saveLetter">Enviar / guardar carta</button>
         </div>
       </div>
-    </div>
-  </div>
+    </form>
+  </dialog>
 
+  <dialog id="lightbox" class="lightbox">
+    <div class="lightbox-shell">
+      <button type="button" class="lightbox-close" id="closeLightbox">×</button>
+      <img id="lightboxImage" src="" alt="Recuerdo familiar" />
+      <div class="lightbox-copy">
+        <span class="tag" id="lightboxTag"></span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxNote"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <script id="photos-data" type="application/json">[{"src": "assets/img/recuerdos/foto_001.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_001_thumb.jpg", "title": "Nuestros primeros pasos", "note": "Un recuerdo de cuando todo empezaba y el amor de familia ya lo abrazaba todo.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_002.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_002_thumb.jpg", "title": "Una familia que crece", "note": "Cada etapa nos fue uniendo más: mamá, papá y sus hijos caminando juntos.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_003.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_003_thumb.jpg", "title": "Sonrisas que se quedan", "note": "Hay fotos que guardan una risa, una mirada y un instante que vale para siempre.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_004.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_004_thumb.jpg", "title": "Orgullo de papá", "note": "En cada logro, en cada paso y en cada sueño, siempre ha estado tu ejemplo.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_005.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_005_thumb.jpg", "title": "Un hogar con amor", "note": "Más que una foto, este momento representa el cariño que sostiene a la familia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_006.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_006_thumb.jpg", "title": "Recuerdo entrañable", "note": "Un instante sencillo que hoy se vuelve tesoro por todo lo que significa.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_007.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_007_thumb.jpg", "title": "Etapas de vida", "note": "Desde pequeños hasta hoy, cada recuerdo cuenta una parte de nuestra historia.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_008.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_008_thumb.jpg", "title": "Siempre juntos", "note": "Lo más bonito de los años es ver cómo el amor familiar permanece.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_009.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_009_thumb.jpg", "title": "Motivos para agradecer", "note": "Una imagen que recuerda cuánto hemos compartido y cuánto hay que agradecer.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_010.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_010_thumb.jpg", "title": "Momentos de alegría", "note": "Aquí vive esa alegría tan nuestra: auténtica, familiar y llena de cariño.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_011.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_011_thumb.jpg", "title": "Historia de familia", "note": "Cada fotografía es una página más de esta historia escrita con amor.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_012.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_012_thumb.jpg", "title": "Recuerdo especial", "note": "Estos momentos son los que hacen grande a una familia: presencia, amor y unión.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_013.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_013_thumb.jpg", "title": "Creciendo contigo", "note": "Tus hijos crecieron contigo como guía, ejemplo y compañero de vida.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_014.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_014_thumb.jpg", "title": "Tiempo de abrazar la vida", "note": "Esta foto nos recuerda que los mejores regalos son las personas que amamos.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_015.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_015_thumb.jpg", "title": "Aventura compartida", "note": "Entre etapas, celebraciones y días normales, fuimos construyendo memorias inolvidables.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_016.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_016_thumb.jpg", "title": "Un momento para el corazón", "note": "Porque hay recuerdos que no solo se miran: también se sienten.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_017.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_017_thumb.jpg", "title": "Familia, amor y orgullo", "note": "Una escena que resume lo más importante: el amor por nuestra familia.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_018.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_018_thumb.jpg", "title": "Lo mejor de nosotros", "note": "En estos recuerdos vive la fuerza del hogar que juntos han formado.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_019.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_019_thumb.jpg", "title": "Instante inolvidable", "note": "Un pedacito de vida que hoy se vuelve aún más valioso al recordarlo.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_020.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_020_thumb.jpg", "title": "La alegría de estar juntos", "note": "Lo bonito de esta foto es todo lo que dice sin necesidad de palabras.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_021.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_021_thumb.jpg", "title": "Entre recuerdos y cariño", "note": "Cada etapa ha tenido su encanto, y cada foto guarda su propia magia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_022.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_022_thumb.jpg", "title": "Un recuerdo con alma", "note": "Las memorias más valiosas son las que nacen del amor de familia.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_023.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_023_thumb.jpg", "title": "Celebrar la vida", "note": "Porque también de eso se trata la familia: celebrar lo vivido y seguir unidos.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_024.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_024_thumb.jpg", "title": "Amor que permanece", "note": "El tiempo pasa, pero los recuerdos en familia siempre encuentran cómo quedarse.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_025.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_025_thumb.jpg", "title": "Nuestros primeros pasos", "note": "Un recuerdo de cuando todo empezaba y el amor de familia ya lo abrazaba todo.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_026.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_026_thumb.jpg", "title": "Una familia que crece", "note": "Cada etapa nos fue uniendo más: mamá, papá y sus hijos caminando juntos.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_027.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_027_thumb.jpg", "title": "Sonrisas que se quedan", "note": "Hay fotos que guardan una risa, una mirada y un instante que vale para siempre.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_028.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_028_thumb.jpg", "title": "Orgullo de papá", "note": "En cada logro, en cada paso y en cada sueño, siempre ha estado tu ejemplo.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_029.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_029_thumb.jpg", "title": "Un hogar con amor", "note": "Más que una foto, este momento representa el cariño que sostiene a la familia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_030.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_030_thumb.jpg", "title": "Recuerdo entrañable", "note": "Un instante sencillo que hoy se vuelve tesoro por todo lo que significa.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_031.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_031_thumb.jpg", "title": "Etapas de vida", "note": "Desde pequeños hasta hoy, cada recuerdo cuenta una parte de nuestra historia.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_032.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_032_thumb.jpg", "title": "Siempre juntos", "note": "Lo más bonito de los años es ver cómo el amor familiar permanece.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_033.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_033_thumb.jpg", "title": "Motivos para agradecer", "note": "Una imagen que recuerda cuánto hemos compartido y cuánto hay que agradecer.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_034.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_034_thumb.jpg", "title": "Momentos de alegría", "note": "Aquí vive esa alegría tan nuestra: auténtica, familiar y llena de cariño.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_035.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_035_thumb.jpg", "title": "Historia de familia", "note": "Cada fotografía es una página más de esta historia escrita con amor.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_036.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_036_thumb.jpg", "title": "Recuerdo especial", "note": "Estos momentos son los que hacen grande a una familia: presencia, amor y unión.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_037.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_037_thumb.jpg", "title": "Creciendo contigo", "note": "Tus hijos crecieron contigo como guía, ejemplo y compañero de vida.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_038.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_038_thumb.jpg", "title": "Tiempo de abrazar la vida", "note": "Esta foto nos recuerda que los mejores regalos son las personas que amamos.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_039.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_039_thumb.jpg", "title": "Aventura compartida", "note": "Entre etapas, celebraciones y días normales, fuimos construyendo memorias inolvidables.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_040.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_040_thumb.jpg", "title": "Un momento para el corazón", "note": "Porque hay recuerdos que no solo se miran: también se sienten.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_041.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_041_thumb.jpg", "title": "Familia, amor y orgullo", "note": "Una escena que resume lo más importante: el amor por nuestra familia.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_042.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_042_thumb.jpg", "title": "Lo mejor de nosotros", "note": "En estos recuerdos vive la fuerza del hogar que juntos han formado.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_043.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_043_thumb.jpg", "title": "Instante inolvidable", "note": "Un pedacito de vida que hoy se vuelve aún más valioso al recordarlo.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_044.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_044_thumb.jpg", "title": "La alegría de estar juntos", "note": "Lo bonito de esta foto es todo lo que dice sin necesidad de palabras.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_045.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_045_thumb.jpg", "title": "Entre recuerdos y cariño", "note": "Cada etapa ha tenido su encanto, y cada foto guarda su propia magia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_046.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_046_thumb.jpg", "title": "Un recuerdo con alma", "note": "Las memorias más valiosas son las que nacen del amor de familia.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_047.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_047_thumb.jpg", "title": "Celebrar la vida", "note": "Porque también de eso se trata la familia: celebrar lo vivido y seguir unidos.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_048.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_048_thumb.jpg", "title": "Amor que permanece", "note": "El tiempo pasa, pero los recuerdos en familia siempre encuentran cómo quedarse.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_049.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_049_thumb.jpg", "title": "Nuestros primeros pasos", "note": "Un recuerdo de cuando todo empezaba y el amor de familia ya lo abrazaba todo.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_050.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_050_thumb.jpg", "title": "Una familia que crece", "note": "Cada etapa nos fue uniendo más: mamá, papá y sus hijos caminando juntos.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_051.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_051_thumb.jpg", "title": "Sonrisas que se quedan", "note": "Hay fotos que guardan una risa, una mirada y un instante que vale para siempre.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_052.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_052_thumb.jpg", "title": "Orgullo de papá", "note": "En cada logro, en cada paso y en cada sueño, siempre ha estado tu ejemplo.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_053.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_053_thumb.jpg", "title": "Un hogar con amor", "note": "Más que una foto, este momento representa el cariño que sostiene a la familia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_054.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_054_thumb.jpg", "title": "Recuerdo entrañable", "note": "Un instante sencillo que hoy se vuelve tesoro por todo lo que significa.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_055.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_055_thumb.jpg", "title": "Etapas de vida", "note": "Desde pequeños hasta hoy, cada recuerdo cuenta una parte de nuestra historia.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_056.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_056_thumb.jpg", "title": "Siempre juntos", "note": "Lo más bonito de los años es ver cómo el amor familiar permanece.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_057.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_057_thumb.jpg", "title": "Motivos para agradecer", "note": "Una imagen que recuerda cuánto hemos compartido y cuánto hay que agradecer.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_058.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_058_thumb.jpg", "title": "Momentos de alegría", "note": "Aquí vive esa alegría tan nuestra: auténtica, familiar y llena de cariño.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_059.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_059_thumb.jpg", "title": "Historia de familia", "note": "Cada fotografía es una página más de esta historia escrita con amor.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_060.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_060_thumb.jpg", "title": "Recuerdo especial", "note": "Estos momentos son los que hacen grande a una familia: presencia, amor y unión.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_061.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_061_thumb.jpg", "title": "Creciendo contigo", "note": "Tus hijos crecieron contigo como guía, ejemplo y compañero de vida.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_062.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_062_thumb.jpg", "title": "Tiempo de abrazar la vida", "note": "Esta foto nos recuerda que los mejores regalos son las personas que amamos.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_063.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_063_thumb.jpg", "title": "Aventura compartida", "note": "Entre etapas, celebraciones y días normales, fuimos construyendo memorias inolvidables.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_064.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_064_thumb.jpg", "title": "Un momento para el corazón", "note": "Porque hay recuerdos que no solo se miran: también se sienten.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_065.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_065_thumb.jpg", "title": "Familia, amor y orgullo", "note": "Una escena que resume lo más importante: el amor por nuestra familia.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_066.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_066_thumb.jpg", "title": "Lo mejor de nosotros", "note": "En estos recuerdos vive la fuerza del hogar que juntos han formado.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_067.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_067_thumb.jpg", "title": "Instante inolvidable", "note": "Un pedacito de vida que hoy se vuelve aún más valioso al recordarlo.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_068.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_068_thumb.jpg", "title": "La alegría de estar juntos", "note": "Lo bonito de esta foto es todo lo que dice sin necesidad de palabras.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_069.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_069_thumb.jpg", "title": "Entre recuerdos y cariño", "note": "Cada etapa ha tenido su encanto, y cada foto guarda su propia magia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_070.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_070_thumb.jpg", "title": "Un recuerdo con alma", "note": "Las memorias más valiosas son las que nacen del amor de familia.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_071.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_071_thumb.jpg", "title": "Celebrar la vida", "note": "Porque también de eso se trata la familia: celebrar lo vivido y seguir unidos.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_072.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_072_thumb.jpg", "title": "Amor que permanece", "note": "El tiempo pasa, pero los recuerdos en familia siempre encuentran cómo quedarse.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_073.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_073_thumb.jpg", "title": "Nuestros primeros pasos", "note": "Un recuerdo de cuando todo empezaba y el amor de familia ya lo abrazaba todo.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_074.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_074_thumb.jpg", "title": "Una familia que crece", "note": "Cada etapa nos fue uniendo más: mamá, papá y sus hijos caminando juntos.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_075.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_075_thumb.jpg", "title": "Sonrisas que se quedan", "note": "Hay fotos que guardan una risa, una mirada y un instante que vale para siempre.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_076.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_076_thumb.jpg", "title": "Orgullo de papá", "note": "En cada logro, en cada paso y en cada sueño, siempre ha estado tu ejemplo.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_077.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_077_thumb.jpg", "title": "Un hogar con amor", "note": "Más que una foto, este momento representa el cariño que sostiene a la familia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_078.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_078_thumb.jpg", "title": "Recuerdo entrañable", "note": "Un instante sencillo que hoy se vuelve tesoro por todo lo que significa.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_079.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_079_thumb.jpg", "title": "Etapas de vida", "note": "Desde pequeños hasta hoy, cada recuerdo cuenta una parte de nuestra historia.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_080.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_080_thumb.jpg", "title": "Siempre juntos", "note": "Lo más bonito de los años es ver cómo el amor familiar permanece.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_081.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_081_thumb.jpg", "title": "Motivos para agradecer", "note": "Una imagen que recuerda cuánto hemos compartido y cuánto hay que agradecer.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_082.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_082_thumb.jpg", "title": "Momentos de alegría", "note": "Aquí vive esa alegría tan nuestra: auténtica, familiar y llena de cariño.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_083.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_083_thumb.jpg", "title": "Historia de familia", "note": "Cada fotografía es una página más de esta historia escrita con amor.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_084.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_084_thumb.jpg", "title": "Recuerdo especial", "note": "Estos momentos son los que hacen grande a una familia: presencia, amor y unión.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_085.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_085_thumb.jpg", "title": "Creciendo contigo", "note": "Tus hijos crecieron contigo como guía, ejemplo y compañero de vida.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_086.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_086_thumb.jpg", "title": "Tiempo de abrazar la vida", "note": "Esta foto nos recuerda que los mejores regalos son las personas que amamos.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_087.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_087_thumb.jpg", "title": "Aventura compartida", "note": "Entre etapas, celebraciones y días normales, fuimos construyendo memorias inolvidables.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_088.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_088_thumb.jpg", "title": "Un momento para el corazón", "note": "Porque hay recuerdos que no solo se miran: también se sienten.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_089.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_089_thumb.jpg", "title": "Familia, amor y orgullo", "note": "Una escena que resume lo más importante: el amor por nuestra familia.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_090.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_090_thumb.jpg", "title": "Lo mejor de nosotros", "note": "En estos recuerdos vive la fuerza del hogar que juntos han formado.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_091.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_091_thumb.jpg", "title": "Instante inolvidable", "note": "Un pedacito de vida que hoy se vuelve aún más valioso al recordarlo.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_092.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_092_thumb.jpg", "title": "La alegría de estar juntos", "note": "Lo bonito de esta foto es todo lo que dice sin necesidad de palabras.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_093.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_093_thumb.jpg", "title": "Entre recuerdos y cariño", "note": "Cada etapa ha tenido su encanto, y cada foto guarda su propia magia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_094.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_094_thumb.jpg", "title": "Un recuerdo con alma", "note": "Las memorias más valiosas son las que nacen del amor de familia.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_095.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_095_thumb.jpg", "title": "Celebrar la vida", "note": "Porque también de eso se trata la familia: celebrar lo vivido y seguir unidos.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_096.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_096_thumb.jpg", "title": "Amor que permanece", "note": "El tiempo pasa, pero los recuerdos en familia siempre encuentran cómo quedarse.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_097.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_097_thumb.jpg", "title": "Nuestros primeros pasos", "note": "Un recuerdo de cuando todo empezaba y el amor de familia ya lo abrazaba todo.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_098.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_098_thumb.jpg", "title": "Una familia que crece", "note": "Cada etapa nos fue uniendo más: mamá, papá y sus hijos caminando juntos.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_099.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_099_thumb.jpg", "title": "Sonrisas que se quedan", "note": "Hay fotos que guardan una risa, una mirada y un instante que vale para siempre.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_100.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_100_thumb.jpg", "title": "Orgullo de papá", "note": "En cada logro, en cada paso y en cada sueño, siempre ha estado tu ejemplo.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_101.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_101_thumb.jpg", "title": "Un hogar con amor", "note": "Más que una foto, este momento representa el cariño que sostiene a la familia.", "label": "Risas"}, {"src": "assets/img/recuerdos/foto_102.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_102_thumb.jpg", "title": "Recuerdo entrañable", "note": "Un instante sencillo que hoy se vuelve tesoro por todo lo que significa.", "label": "Aventura"}, {"src": "assets/img/recuerdos/foto_103.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_103_thumb.jpg", "title": "Etapas de vida", "note": "Desde pequeños hasta hoy, cada recuerdo cuenta una parte de nuestra historia.", "label": "Orgullo"}, {"src": "assets/img/recuerdos/foto_104.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_104_thumb.jpg", "title": "Siempre juntos", "note": "Lo más bonito de los años es ver cómo el amor familiar permanece.", "label": "Celebración"}, {"src": "assets/img/recuerdos/foto_105.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_105_thumb.jpg", "title": "Motivos para agradecer", "note": "Una imagen que recuerda cuánto hemos compartido y cuánto hay que agradecer.", "label": "Infancia"}, {"src": "assets/img/recuerdos/foto_106.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_106_thumb.jpg", "title": "Momentos de alegría", "note": "Aquí vive esa alegría tan nuestra: auténtica, familiar y llena de cariño.", "label": "Familia"}, {"src": "assets/img/recuerdos/foto_107.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_107_thumb.jpg", "title": "Historia de familia", "note": "Cada fotografía es una página más de esta historia escrita con amor.", "label": "Logros"}, {"src": "assets/img/recuerdos/foto_108.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_108_thumb.jpg", "title": "Recuerdo especial", "note": "Estos momentos son los que hacen grande a una familia: presencia, amor y unión.", "label": "Etapas"}, {"src": "assets/img/recuerdos/foto_109.jpg", "thumb": "assets/img/recuerdos/thumbs/foto_109_thumb.jpg", "title": "Creciendo contigo", "note": "Tus hijos crecieron contigo como guía, ejemplo y compañero de vida.", "label": "Risas"}]</script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
