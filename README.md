@@ -14,11 +14,6 @@ Proyecto listo para subir a GitHub Pages.
 
 - Cartas en pergamino.
 - Editor de cartas con contraseña:
-  - esposa123
-  - rene123
-  - jesus123
-  - diego123
-  - padre123
 - Álbum de recuerdos tipo baraja/polaroid.
 - Lightbox para ver fotos en grande.
 - Juego de tiro al blanco.
